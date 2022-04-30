@@ -106,4 +106,10 @@ contract ERC721{
     function _checkOnERC721Received()private pure returns(bool){
         return true;
     }
+    
+        // EIP165 : Query if a contract implements another interface
+    function supportsInterface(bytes4 interfaceId) public pure virtual returns(bool) {
+        return interfaceId == 0x80ac58cd;
+    }    
+
 }
